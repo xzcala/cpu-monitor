@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jcbrzfcpumonitorfxml.FXMLDocumentController">
+    <children>
+      <VBox alignment="TOP_CENTER" layoutX="50.0" layoutY="375.0" prefHeight="200.0" prefWidth="300.0" spacing="5.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Record Board">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font></Text>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Text fx:id="record1" strokeType="OUTSIDE" strokeWidth="0.0" text="--.--%">
+                     <font>
+                        <Font name="Forte" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="record2" strokeType="OUTSIDE" strokeWidth="0.0" text="--.--%">
+                     <font>
+                        <Font name="Forte" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="record3" strokeType="OUTSIDE" strokeWidth="0.0" text="--.--%">
+                     <font>
+                        <Font name="Forte" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <StackPane alignment="TOP_CENTER" layoutX="50.0" layoutY="35.0" prefHeight="300.0" prefWidth="300.0">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+               <image>
+                  <Image url="@gauge.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hand" fitHeight="200.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+               <image>
+                  <Image url="@hand.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="shadow" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0%" textAlignment="CENTER" wrappingWidth="143.6708984375" StackPane.alignment="CENTER">
+               <font>
+                  <Font name="Book Antiqua" size="35.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets top="100.0" />
+               </StackPane.margin>
+               <effect>
+                  <Shadow color="WHITE" />
+               </effect>
+            </Text>
+            <Text fx:id="percentage" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0%" textAlignment="CENTER" wrappingWidth="143.6708984375" StackPane.alignment="CENTER">
+               <StackPane.margin>
+                  <Insets top="100.0" />
+               </StackPane.margin>
+               <font>
+                  <Font name="Book Antiqua" size="35.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+      <HBox alignment="BOTTOM_CENTER" layoutX="50.0" layoutY="575.0" prefHeight="71.0" prefWidth="300.0" spacing="50.0">
+         <children>
+            <Button fx:id="record" mnemonicParsing="false" onAction="#record" text="Record" />
+            <Button fx:id="start" mnemonicParsing="false" onAction="#start" text="Start" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+    </children>
+</AnchorPane>
